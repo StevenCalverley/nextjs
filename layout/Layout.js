@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Nav from './Nav'
 
 const name = 'Steve Calverley'
 export const siteTitle = 'Steven Calverley'
@@ -23,7 +24,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
       </Head>
-      <header className='flex justify-center items-center flex-col'>
+      <header className='pt-8 flex justify-center items-center flex-col'>
         {home ? (
           <>
             <img
@@ -51,16 +52,10 @@ export default function Layout({ children, home }) {
             </h2>
           </>
         )}
+        <Nav />
       </header>
       <main className="mt-16 mx-auto container">
         {children}
-        {!home && (
-          <div className="mt-4 transform hover:-translate-x-2">
-            <Link href="/">
-              <a className='text-blue-600 font-medium'>← Back to home</a>
-            </Link>
-          </div>
-        )}
       </main>
       
     </div>
