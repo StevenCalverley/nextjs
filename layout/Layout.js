@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Nav from './Nav'
 
-const name = 'Steve Calverley'
+const name = 'Steven Calverley'
 export const siteTitle = 'Steven Calverley'
 
 export default function Layout({ children, home }) {
